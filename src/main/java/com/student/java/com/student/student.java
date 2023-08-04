@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//swe645
+//swe645 assignment03
 
 @Entity
 @Data
