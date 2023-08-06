@@ -12,7 +12,7 @@ pipeline{
 					sh 'mvn clean package'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					
-					sh "echo 'Yamini@2304' | docker login -u ygona --password-stdin"
+					sh 'docker login -u ygona -p ${DOCKERHUB_PASS}'
 
 					sh 'docker build -t ygona/surveyjar .'
 				}
