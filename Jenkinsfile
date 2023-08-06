@@ -11,7 +11,9 @@ pipeline{
 					sh 'rm -rf *.jar'
 					sh 'mvn clean package'
 					sh 'echo ${BUILD_TIMESTAMP}'
-					sh 'sudo docker login -u ygona -p ${DOCKERHUB_PASS}'
+					
+					sh "echo 'Yamini@2304' | docker login -u ygona --password-stdin"
+
 					sh 'docker build -t ygona/surveyjar .'
 				}
 			}
